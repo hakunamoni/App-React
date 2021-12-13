@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
 
 class SearchBar extends Component{
+
+    constructor(props) {
+        super(props);
+
+        this.state = { term: '' };
+    }
+
     render() {
-        // arrow function
-        // return <input onChange={ (event) => { console.log(event.target.value) } } />;
-        // whenenver there's a single line arrow function, don't use additional curly brace ("{}") like the following
-        // return <input onChange={ (event÷) => console.log(event.target.value) } />;
-        // if there's sinlge argument, drop off parentheses ("()")
-        return <input onChange={ event => console.log(event.target.value) } />;
+        return (
+            <div>
+                <input onChange={ event => this.setState({ term: event.target.value }) } />
+            </div>
+        );
     }
 };
 
 export default SearchBar;
-
