@@ -6,6 +6,11 @@ import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar';
 
 const API_KEY = 'AIzaSyCROeILdEUq5DsiRjrjo-MT_D-qT1-AlL0';
+
+// YTSearch( {key: API_KEY, term: 'surfboards'}, function(data) {
+//     console.log(data);
+// });
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +19,8 @@ class App extends Component {
 
         YTSearch( {key: API_KEY, term: 'surfboards'}, function(videos) {
             this.setState({ videos });
+            // JSX will make recognize as below automatically
+            // this.setState({ videos : videos });
         });
     }
 
