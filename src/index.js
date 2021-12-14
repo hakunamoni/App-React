@@ -20,23 +20,12 @@ class App extends Component {
     }
 
     render() {
-        // return (
-        //     <div>
-        //         <SearchBar />
-        //         <VideoList />
-        //     </div>    
-        // );
-
-        // pass some data from parent component ("App") into the child component ("VideoList")
         return (
             <div>
                 <SearchBar />
                 <VideoList videos={this.state.videos} />
             </div>
         );
-        // passing data like this, it's referred to as passing "props" in React
-        // the data ("videos") that passing from "App" to "VideoList" is referred to as a "prop"
-        // anytime "App" renders, like when set state on the component, "VideoList" will get a new list of "videos" as well
     }
 }
 
