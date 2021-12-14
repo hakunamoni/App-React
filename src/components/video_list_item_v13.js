@@ -1,6 +1,10 @@
 import React from "react";
 
 const VideoListItem = ({video, onVideoSelect}) => {
+    // the above 2 parameters are equal like below
+    // const video = props.video
+    // const onVideoSelect = props.onVideoSelect
+
     const imgUrl = video.snippet.thumbnails.default.url;
 
     return (
