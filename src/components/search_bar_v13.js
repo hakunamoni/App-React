@@ -20,3 +20,8 @@ class SearchBar extends Component{
 };
 
 export default SearchBar;
+
+/*
+in general, give the top level component a "className" that is same as the component name.
+lowercase separated by dashes ("SearchBar" -> "search-bar")
+*/
