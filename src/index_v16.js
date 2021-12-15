@@ -47,3 +47,5 @@ class App extends Component {
 }
 
 ReactDom.render(<App />, document.querySelector('.container'));
+
+// use "debounce" function (of "lodash" library) to call "videoSearch" in 300ms
