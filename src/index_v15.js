@@ -44,3 +44,15 @@ class App extends Component {
 }
 
 ReactDom.render(<App />, document.querySelector('.container'));
+
+/*
+1 - refactored the Youtube search into its own method "videoSearch" and this method takes a single string "search term" (column 21)
+2 - took this method "videoSearch" and passed it down into the "SearchBar" under the property "onSearchTermChange" (column 35)
+    all "SearchBar" has to do is call "onSearchTermChange" with the new search term ("term") and 
+    that will call the searching function ("videoSearch") which will go ahead and fetch a new list of videos
+3 - inside of "SearchBar" (search_bar.js), refactored the "onChange" event (column 15 in search_bar.js)
+    whenever the content of the input is changed, it now calls "onInputChange" with the new input value
+4 - "onInputChange" has 2 functions / 2 purposes (column 21 in search_bar.js)
+    - first, it sets the state of this component ("SearchBar") (column 22 in search_bar.js)
+    - secondly, it fires off the callback function "onSearchTermChange" (column 23 in search_bar.js)
+*/

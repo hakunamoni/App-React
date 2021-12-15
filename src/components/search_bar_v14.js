@@ -25,3 +25,7 @@ class SearchBar extends Component{
 };
 
 export default SearchBar;
+
+/*
+whenever the input is changed ("onChange"), call "onInputChange" with the new value
+*/

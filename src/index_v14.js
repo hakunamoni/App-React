@@ -44,3 +44,9 @@ class App extends Component {
 }
 
 ReactDom.render(<App />, document.querySelector('.container'));
+
+/*
+<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+when "search bar" calls "onSearchTermChange", "term" will be sent to this.videoSearch(term)
+videoSearch will do the Youtube search
+*/
